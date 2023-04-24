@@ -10,16 +10,28 @@
 
 
 
-//Create a function that takes two strings as args and return either true or false depending on the total number of characters in the
-//first string is equal to the number characaters in the second string.code-active-line
+//create a function for the game rock, paper,scissors
+//ex: playGame("Rock", "Paper") -> 'Paper is Winner"
 
-//ex. compareTwoStrings("AB", "CD") -> true
-//ex: compareTwoStrings("ABC", "DE") -> false 
 
-function compareTwoStrings(strOne, strTwo){
-    return strOne.length === strTwo.length
+//the fucntion with the choice the each player made
+function playGame(opt1, opt2){
+    //the if statement to determine the winner
+    //the players have to type in Rock, Paper and Scissors exactly or the ifelse statements won't recognise it
+    if (opt1 || opt2 == "Rock" && opt2 || opt1 == "Paper") {
+        return "Winner is Paper"
+
+    }   else{
+        if (opt1 || opt2 == "Paper" && opt2 || opt1 == "Scissors") {
+            return "Winner is Scissors"
+        }
+            else{
+                 if (opt1 || opt2 == "Scissors" && opt2 || opt1 == "Rock"){
+                    return "Winner is Rock"
+             }
+    }
+}   
+   
 }
 
-console.log(compareTwoStrings("AB", "CD"))
-
-
+console.log(playGame("Scissors", "Rock"))
