@@ -15,23 +15,40 @@
 
 
 //the fucntion with the choice the each player made
+
+//the fucntion with the choice the each player made
 function playGame(opt1, opt2){
     //the if statement to determine the winner
-    //the players have to type in Rock, Paper and Scissors exactly or the ifelse statements won't recognise it
-    if (opt1 || opt2 == "Rock" && opt2 || opt1 == "Paper") {
-        return "Winner is Paper"
-
-    }   else{
-        if (opt1 || opt2 == "Paper" && opt2 || opt1 == "Scissors") {
-            return "Winner is Scissors"
-        }
-            else{
-                 if (opt1 || opt2 == "Scissors" && opt2 || opt1 == "Rock"){
-                    return "Winner is Rock"
-             }
+    //the players have to type in Rock, Paper and Scissors exactly or the else if statements won't recognise it
+    if (opt1 === opt2){
+        return "Draw"
     }
-}   
-   
+    //all the different choices to put in both opt
+        else if
+        (opt1 == "Rock" && opt2 == "Paper") {
+        return "Winner is Paper"
+            }
+        else if
+        (opt1 == "Paper" && opt2 == "Rock") {
+        return "Winner is Paper"
+            } 
+        else if
+        (opt1 == "Paper" && opt2 == "Scissors") {
+            return "Winner is Scissors"
+            }
+        else if
+        (opt1 == "Scissors" && opt2 == "Paper") {
+            return "Winner is Scissors"
+            }
+        else if
+        (opt1 == "Scissors" && opt2 == "Rock"){
+                return "Winner is Rock"
+             } 
+        else if
+        (opt1 == "Rock" && opt2 == "Scissors"){
+                return "Winner is Rock"
+                }
 }
 
-console.log(playGame("Scissors", "Rock"))
+//to call the function with the strings to find who wins or draws or loses
+console.log(playGame("Scissors", "Scissors"))
